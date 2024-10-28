@@ -132,3 +132,19 @@ export const tech = [
                    img : "/images/tech2.png"
         },
 ]
+
+export const reviews =[
+        {
+                review : "“I loved visiting the website to get a gauge of the laptops I liked, and when I visited the store I fell in love with it. The laptop was in pristine condition and got a great deal! I highly recommend”",
+                name :"Muhammad"
+        },
+        {
+                review : "“I'm thrilled with the laptop I won from the Alpha Tech giveaway. Its performance is outstanding - super fast, with incredible graphics and clear audio. The battery life is remarkable, lasting all day. I use it constantly and would recommend...”",
+                name: "Raina"
+        },
+        {
+                review : "“We needed a 65 inch 4k Smart TV, and we saved over 1,000,000 tsh with AlphaTech! The experience was great as we were able to test it out within the store and purchased top quality at affordable rates!”",
+                name: "Sumaiya"
+        },
+
+]
