@@ -126,10 +126,22 @@ export const tech = [
                    img : "/images/tech2.png"
         },
         {
-                num : "02",
-                title: "Resource Conservation",
-                about : "The production of electronic devices consumes valuable natural resources. By choosing certified used technology, consumers conserve these resources, as refurbishment uses fewer raw materials than manufacturing new devices. This conservation is crucial for preserving the environment.",
-                   img : "/images/tech2.png"
+                num : "03",
+                title: "Energy Savings",
+                about : "Manufacturing new electronic devices demands a significant amount of energy. By choosing certified used technology, consumers indirectly contribute to energy conservation, as the energy-intensive production phase is circumvented. This translates into reduced greenhouse gas emissions and a lighter carbon footprint.",
+                   img : "/images/tech3.png"
+        },
+        {
+                num : "04",
+                title: "Minimizing Pollution",
+                about : "The production of electronic devices often results in pollution of air, water and soil due to the release of pollutants from manufacturing processes. Certified used technology helps reduce these harmful emissions by lowering the demand for new production, thereby mitigating pollution and its environmental consequence",
+                   img : "/images/tech4.png"
+        },
+        {
+                num : "05",
+                title: "Promoting Recycling",
+                about : "The production of electronic devices often results in pollution of air, water and soil due to the release of pollutants from manufacturing processes. Certified used technology helps reduce these harmful emissions by lowering the demand for new production, thereby mitigating pollution and its environmental consequence",
+                   img : "/images/tech5.png"
         },
 ]
 
@@ -139,8 +151,20 @@ export const reviews =[
                 name :"Muhammad"
         },
         {
-                review : "“I'm thrilled with the laptop I won from the Alpha Tech giveaway. Its performance is outstanding - super fast, with incredible graphics and clear audio. The battery life is remarkable, lasting all day. I use it constantly and would recommend...”",
+                review : "“I'm thrilled with the laptop I won from the Alpha Tech giveaway. Its performance is outstanding - super fast, with incredible graphics and clear audio. The battery life is remarkable”",
                 name: "Raina"
+        },
+        {
+                review : "“We needed a 65 inch 4k Smart TV, and we saved over 1,000,000 tsh with AlphaTech! The experience was great as we were able to test it out within the store and remarkable.”",
+                name: "Sumaiya"
+        },
+        {
+                review : "“We needed a 65 inch 4k Smart TV, and we saved over 1,000,000 tsh with AlphaTech! The experience was great as we were able to test it out within the store and purchased top quality at affordable rates!”",
+                name: "Sumaiya"
+        },
+        {
+                review : "“We needed a 65 inch 4k Smart TV, and we saved over 1,000,000 tsh with AlphaTech! The experience was great as we were able to test it out within the store and purchased top quality at affordable rates!”",
+                name: "Sumaiya"
         },
         {
                 review : "“We needed a 65 inch 4k Smart TV, and we saved over 1,000,000 tsh with AlphaTech! The experience was great as we were able to test it out within the store and purchased top quality at affordable rates!”",
@@ -148,3 +172,43 @@ export const reviews =[
         },
 
 ]
+
+export const collectionData = [
+        {
+                img : "/images/collection1.png",
+                title : "MacBook"
+        },
+        {
+                img : "/images/slider3.webp",
+                title : "Smartphones"
+        },
+        {
+                img : "/images/drive.png",
+                title : "Accessories"
+        },
+        {
+                img : "/images/slider5.webp",
+                title : "Smart TV"
+        },
+        {
+                img : "/images/collection4.png",
+                title : "iphones"
+        },
+        {
+                img : "/images/product3.png",
+                title : "Smart Watches"
+        },
+        {
+                img : "/images/slider2.webp",
+                title : "MacBook"
+        },
+        {
+                img : "/images/collection7.png",
+                title : "iPad"
+        },
+        {
+                img : "/images/collection8.png",
+                title : "MacBook"
+        },
+]
+

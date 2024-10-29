@@ -1,13 +1,24 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { tech } from "../../../data/content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 import Slidercontent from "../common/Slidercontent";
 
 const Slider = () => {
+
+  const [active, setActive] = useState(0);
+  const ref = useRef();
+
+  const handleSlideNext = () => {
+    ref.current.slideNext();
+  };
+
+  const handleSlidePrev = () => {
+    ref.current.slidePrev();
+  };
   return (
     <section className="py-20">
       <div className="max-width">
@@ -27,20 +38,20 @@ const Slider = () => {
             </div>
 
             <div className="flex gap-5 max-md:hidden ">
-              <Link
-                href=""
+              <button
+                onClick={handleSlidePrev}
                 className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full"
               >
                 {" "}
                 <img src="/icons/arrow-left.svg" alt="" />
-              </Link>
-              <Link
-                href=""
+              </button>
+              <button
+                onClick={handleSlideNext}
                 className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full"
               >
                 {" "}
                 <img src="/icons/arrow-right-green.svg" alt="" />
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -48,33 +59,49 @@ const Slider = () => {
 
           <Swiper
             spaceBetween={50}
-            slidesPerView={2}
+            breakpoints={{
+              // when window width is >= 640px
+              0: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 1,
+              },
+              1280: {
+                slidesPerView: 2,
+              },
+            }}
             onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            onSwiper={(swiper) => (ref.current = swiper)}
+            onActiveIndexChange={(swiper) => setActive(swiper.realIndex)}
             className="w-[60%] flex gap-10 max-md:flex-col max-md:w-full max-md:overflow-hidden"
           >
             {tech.map((item, index) => (
               <SwiperSlide key={index} >
-              <Slidercontent item={item}/>
+                <Slidercontent item={item}  index={index} active={active}/>
               </SwiperSlide>
             ))}
           </Swiper>
 
           <div className="flex gap-5 md:hidden mt-5 justify-center">
-            <Link
-              href=""
+            <button
+              onClick={handleSlidePrev}
               className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full max-md:py-4 max-md:px-3"
             >
               {" "}
               <img src="/icons/arrow-left.svg" alt="" />
-            </Link>
-            <Link
-              href=""
+            </button>
+            <button
+              onClick={handleSlideNext}
               className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full max-md:py-4 max-md:px-3"
             >
               {" "}
               <img src="/icons/arrow-right-green.svg" alt="" />
-            </Link>
+            </button>
           </div>
         </div>
       </div>

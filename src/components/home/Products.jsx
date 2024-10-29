@@ -8,20 +8,11 @@ const Products = () => {
     <section className="py-20 ">
       {/* parent div */}
 
-      {product.map((item, index) => (
-      <div key={index} className="mb-5 max-width  flex-col flex-wrap">
-       
- <ProductCard item={item} index={index} />
-
-    
-       
+      <div   className="mb-5 gap-5 max-width w-full flex flex-wrap">
+        {product.map((item, index) => (
+          <ProductCard key={index} item={item} index={index} />
+        ))}
       </div>
-          ))}
-
-
-
-
-  
     </section>
   );
 };

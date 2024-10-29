@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Slidercontent = ({item}) => {
+const Slidercontent = ({item, active, index}) => {
   return (
-    <div className="flex flex-col gap-y-5">
+    <div className={`flex flex-col gap-y-5 ${active != index && "opacity-50"}` } >
           <h2 className="text-6xl font-bold text-[#474747] max-md:text-5xl">
                   {item.num}
                 </h2>

@@ -4,9 +4,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <section className="max-width py-3 h-[14vh]  flex max-md:justify-between ">
+
+    <section className="max-width py-3 h-[14vh] max-md:h-[10vh] flex max-md:justify-between ">
       <div className="lg:mr-10">
-        <img src="/images/logo.webp" alt="" className=" h-[70px]" />
+        <img src="/images/logo.webp" alt="" className=" h-[70px] max-md:h-[55px]" />
       </div>
       <div className="flex items-center w-full justify-between ">
         <img src="/icons/menu.svg" alt="" className="w-7 max-md:hidden md::mr-2" />
@@ -19,10 +20,20 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="flex  lg:gap-6 max-md:gap-4">
+        <div className="flex  lg:gap-6 max-md:gap-4 max-md:absolute max-md:right-5">
           <img src="/icons/search.svg" alt="" className="w-6" />
-          <img src="/icons/bag.svg" alt="" className="w-6" />
+          <img src="/icons/bag.svg" alt="" className="w-6 max-md:hidden" />
+          <img src="/icons/menu.svg" alt="" className="w-7 md:hidden md::mr-2" />
         </div>
+
+
+    
+     
+    
+      </div>
+  {/* mobile side menu */}
+      <div>
+          
       </div>
     </section>
   );

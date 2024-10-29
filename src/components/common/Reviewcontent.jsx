@@ -2,8 +2,8 @@ import React from 'react'
 
 const Reviewcontent = ({item}) => {
   return (
-    <div className="bg-[#F3F6F7] py-6 px-10 w-[500px] rounded-lg">
-        <div className='w-full '>
+    <div className="w-full bg-[#F3F6F7] px-5 py-5 h-full flex flex-col items-start justify-start">
+        <div className='w-[100px] '>
          <img
                   src="/icons/question.svg"
                   alt=""

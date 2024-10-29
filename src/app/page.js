@@ -18,12 +18,14 @@ export default function Home() {
     <Company/>
     <Collection/>
     <Offer/> 
-    <Products/> 
     <Feature/>  
+    <Products/> 
+   
     <About/>
-    <Request/>
+  
  <Slider/>
  <Testimonal/>
+ <Request/>
     <Footer/>
    </div>
   );
