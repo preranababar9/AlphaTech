@@ -1,8 +1,12 @@
-import React from "react";
-import { OfferTimer } from "../../../data/OfferTimer";
+"use client"
+
+
+import OfferTimer from "../../../data/OfferTimer";
 
 const Offer = () => {
-  const { seconds, minutes, hours, days } = OfferTimer(new Date("2024-12-20"));
+  const targetDate = "2024-12-31";
+  const timeLeft = OfferTimer({ targetDate });
+
   return (
     <section className="py-10">
       <div className="flex ">
@@ -25,28 +29,28 @@ const Offer = () => {
           <div className="flex justify-start gap-5 max-md:gap-1">
             <div className="flex flex-col justify-center items-center ">
               <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
-                {days}
+              {timeLeft.days}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Days</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
               <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
-                {hours}
+              {timeLeft.hours}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Hours</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
               <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
-                {minutes}
+              {timeLeft.minutes}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Minutes</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
               <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
-                {seconds}
+              {timeLeft.seconds}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Seconds</p>
             </div>
