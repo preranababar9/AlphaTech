@@ -88,7 +88,7 @@ const Shop = ({ data, row }) => {
             <img
               src={data[2].img}
               alt=""
-              className="lg:object-contain h-[280px]  max-md:h-[80%]"
+              className="object-contain h-[280px]  max-md:h-[80%]"
             />
           </div>
         </div>
