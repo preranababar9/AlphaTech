@@ -31,30 +31,30 @@ const Offer = () => {
           </p>
           <p>Offer expires in:</p>
 
-          <div className="flex justify-start gap-5 max-md:gap-1">
+          <div className="flex justify-start gap-5 max-md:gap-2">
             <div className="flex flex-col justify-center items-center ">
-              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
+              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl max-md:w-8 font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
               {timeLeft.days}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Days</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
-              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
+              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl max-md:w-8 font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
               {timeLeft.hours}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Hours</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
-              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
+              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl max-md:w-8 font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
               {timeLeft.minutes}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Minutes</p>
             </div>
 
             <div className="flex flex-col justify-center items-center ">
-              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
+              <p className="bg-white text-[#22C55E] py-2 px-3 text-3xl max-md:w-8 font-semibold max-md:text-lg max-md:py-2 max-md:px-2">
               {timeLeft.seconds}
               </p>
               <p className="text-sm max-md:text-xs font-semibold">Seconds</p>
