@@ -3,7 +3,7 @@ import { OfferTimer } from "../../../data/OfferTimer";
 
 const Offer = () => {
 
-const {seconds, minutes, hours, days} = OfferTimer(new Date("2024-12-25"));
+const {seconds, minutes, hours, days} = OfferTimer(new Date("2024-12-20"));
   return (
     <section className="py-10">
       <div className="flex ">

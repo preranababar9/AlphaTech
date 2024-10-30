@@ -9,8 +9,10 @@ const Header = () => {
   useEffect(() => {
     if (toggle) {
       document.body.style.overflow = "hidden";
+      document.body.style.display = "block";
     } else {
       document.body.style.overflow = "auto";
+      document.body.style.display = "hidden";
     }
   }, [toggle]);
   return (
@@ -48,7 +50,7 @@ const Header = () => {
           <img src="/icons/search.svg" alt="" className="w-6" />
           <img src="/icons/bag.svg" alt="" className="w-6 max-md:hidden" />
           <button  onClick={() => {
-              openNav((prev) => !prev); 
+            !nav && openNav(true)
               setToggle(true);
             }}>
           <img
@@ -62,12 +64,15 @@ const Header = () => {
       </div>
 
       {/* mobile side menu */}
+      {nav && (
+
+    
       <div className="max-md:hidden absolute  top-0  bg-[#22C55E] left-0 py-10 h-[100vh] px-20 z-40 text-white">
       <div className="absolute top-0 py-8  right-10 ">
      
      <button onClick={() => {
              openNav(false)
-              setToggle(true);
+              setToggle(false);
             }}>
           <img src="/icons/close.svg" alt="" className="h-8 cursor-pointer"
             /></button>
@@ -86,6 +91,7 @@ const Header = () => {
 
        
       </div>
+        )}
     </section>
   );
 };
