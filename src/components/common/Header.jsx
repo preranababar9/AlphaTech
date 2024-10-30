@@ -25,17 +25,17 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center w-full justify-between ">
-        
-        <button  onClick={() => {
-           !nav && openNav(true)
+        <button
+          onClick={() => {
+            !nav && openNav(true);
             setToggle(true);
-          }}>
-        <img
-          src="/icons/menu.svg"
-          alt=""
-          className="w-7 max-md:hidden md::mr-2"
-         
-        />
+          }}
+        >
+          <img
+            src="/icons/menu.svg"
+            alt=""
+            className="w-7 max-md:hidden md::mr-2"
+          />
         </button>
 
         <div className="flex gap-6 items-center mr-10 max-md:hidden text-nowrap">
@@ -49,49 +49,54 @@ const Header = () => {
         <div className="flex  lg:gap-6 max-md:gap-4 max-md:absolute max-md:right-5">
           <img src="/icons/search.svg" alt="" className="w-6" />
           <img src="/icons/bag.svg" alt="" className="w-6 max-md:hidden" />
-          <button  onClick={() => {
-            !nav && openNav(true)
+          <button
+            onClick={() => {
+              !nav && openNav(true);
               setToggle(true);
-            }}>
-          <img
-            src="/icons/menu.svg"
-            alt=""
-            className="w-7 md:hidden md::mr-2 cursor-pointer"
-           
-          />
+            }}
+          >
+            <img
+              src="/icons/menu.svg"
+              alt=""
+              className="w-7 md:hidden md::mr-2 cursor-pointer"
+            />
           </button>
         </div>
       </div>
 
       {/* mobile side menu */}
       {nav && (
-
-    
-      <div className="max-md:hidden absolute  top-0  bg-[#22C55E] left-0 py-10 h-[100vh] px-20 z-40 text-white">
-      <div className="absolute top-0 py-8  right-10 ">
-     
-     <button onClick={() => {
-             openNav(false)
-              setToggle(false);
-            }}>
-          <img src="/icons/close.svg" alt="" className="h-8 cursor-pointer"
-            /></button>
-        </div>
-        <div className="mt-10 ">
-          {sideMenu.map((item, index) => (
-            <div key={index} className="">
-             
-                <ul className="font-semibold text-2xl max-md:text-lg pb-5 ">
+        <div className="max-md:w-full absolute  top-0  bg-[#22C55E] left-0 py-10 h-[100vh] px-20 z-40 text-white">
+          <div className="absolute top-0 py-8  right-10 ">
+            <button
+              onClick={() => {
+                openNav(false);
+                setToggle(false);
+              }}
+            >
+              <img
+                src="/icons/close.svg"
+                alt=""
+                className="h-8 cursor-pointer"
+              />
+            </button>
+          </div>
+          <div className="max-md:mt-6 mt-10">
+          {menu.map((item, index) => (
+            <ul key={index} className="font-semibold text-2xl max-md:text-lg pb-3 lg:hidden">
+              <Link href={item.href}>{item.name}</Link>
+            </ul>
+          ))}
+            {sideMenu.map((item, index) => (
+              <div key={index} className="">
+                <ul className="font-semibold text-2xl max-md:text-lg pb-5 max-md:pb-3">
                   <Link href={item.href}>{item.name}</Link>
                 </ul>
-             
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
-
-       
-      </div>
-        )}
+      )}
     </section>
   );
 };
