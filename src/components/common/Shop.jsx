@@ -65,8 +65,8 @@ const Shop = ({ data, row }) => {
 
         {/* second div */}
         <div className="bg-[#F3F6F7] flex gap-10 py-5 px-5 justify-between items-end">
-          <div>
-            <h2 className="text-3xl pb-2 lg:text-nowrap max-md:text-lg">
+          <div className="w-[100px]">
+            <h2 className="text-3xl pb-2 lg:text-nowrap max-md:text-lg ">
               {data[2].title}
             </h2>
 
@@ -80,15 +80,15 @@ const Shop = ({ data, row }) => {
               <img
                 src="/icons/arrow-right.svg"
                 alt=""
-                className="w-8 max-md:w-5  h-7 pt-1 "
+                className="w-10 max-md:w-5 h-7 pt-1"
               />
             </div>
           </div>
-          <div>
+          <div className="w-1/2">
             <img
               src={data[2].img}
               alt=""
-              className="object-contain h-[280px]  max-md:h-[80%]"
+              className="object-contain h-[280px] max-md:h-[80%] w-full"
             />
           </div>
         </div>

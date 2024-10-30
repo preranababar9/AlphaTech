@@ -42,7 +42,7 @@ const ProductCard = ({ item, index }) => {
           <img
             src={item.img}
             alt=""
-            className="object-contain h-[300px] max-md:h-[260px] w-[80%] max-md:w-[100%] pb-10"
+            className="object-contain h-[300px] max-md:h-[260px] w-[80%] max-md:w-[100%] pb-10 max-md:pb-5"
           />
         </div>
       </div>
