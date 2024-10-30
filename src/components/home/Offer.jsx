@@ -4,8 +4,13 @@
 import OfferTimer from "../../../data/OfferTimer";
 
 const Offer = () => {
-  const targetDate = "2024-12-31";
-  const timeLeft = OfferTimer({ targetDate });
+  const targetDate = "2024-12-31"; 
+  const timeLeft = OfferTimer(targetDate);
+
+
+  if (!timeLeft) {
+    return null; 
+  }
 
   return (
     <section className="py-10">

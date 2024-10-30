@@ -12,19 +12,30 @@ const calculateTimeLeft = (targetDate) => {
   return { days, hours, minutes, seconds };
 };
 
-const OfferTimer = ({ targetDate }) => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+export const OfferTimer = (targetDate) => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(targetDate));
-    }, 1000);
+    setMounted(true);
+  }, []);
 
-  
-    return () => clearInterval(intervalId);
-  }, [targetDate]);
+  useEffect(() => {
+    if (mounted) {
+      const updateTimeLeft = () => {
+        setTimeLeft(calculateTimeLeft(targetDate));
+      };
 
-  return timeLeft;
+     
+      updateTimeLeft();
+
+      const intervalId = setInterval(updateTimeLeft, 1000);
+
+      return () => clearInterval(intervalId);
+    }
+  }, [targetDate, mounted]);
+
+  return mounted ? timeLeft : null;
 };
 
 export default OfferTimer;
