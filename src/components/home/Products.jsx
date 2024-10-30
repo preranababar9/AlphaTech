@@ -8,7 +8,7 @@ const Products = () => {
     <section className="py-20 ">
       {/* parent div */}
 
-      <div   className="mb-5 gap-5 max-width w-full flex flex-wrap">
+      <div className="mb-5 gap-5 max-width w-full flex flex-wrap">
         {product.map((item, index) => (
           <ProductCard key={index} item={item} index={index} />
         ))}

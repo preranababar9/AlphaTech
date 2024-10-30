@@ -5,7 +5,11 @@ import { product } from "../../../data/content";
 const ProductCard = ({ item, index }) => {
   return (
     <div className="w-[48%] max-md:w-full">
-      <div className={` h-[80vh]  ${index % 2 === 0 ? "bg-black  text-white" : "bg-[#F3F6F7] text-black"  } py-10 max-md:w-full px-4 `}>
+      <div
+        className={` h-[80vh]  ${
+          index % 2 === 0 ? "bg-black  text-white" : "bg-[#F3F6F7] text-black"
+        } py-10 max-md:w-full px-4 `}
+      >
         <div className="flex flex-col items-center justify-center gap-y-3 ">
           <h4 className="text-4xl max-md:text-3xl">{item.name}</h4>
           <p className="text-lg max-md:text-sm text-center">{item.des}</p>

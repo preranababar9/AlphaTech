@@ -31,7 +31,9 @@ const Hero = () => {
       {detail.map((item, index) => (
         <SwiperSlide key={index} className=" ">
           <div className="flex flex-col justify-center items-center gap-y-6 pt-14 h-full bg-black">
-            <h1 className="text-6xl font-bold max-md:text-4xl text-center">{item.title}</h1>
+            <h1 className="text-6xl font-bold max-md:text-4xl text-center">
+              {item.title}
+            </h1>
             <p className="text-2xl font-semibold max-md:text-xl text-center">
               {item.subtitle}
             </p>

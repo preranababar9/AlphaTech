@@ -13,20 +13,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
-    <Hero/>
-    <Company/>
-    <Collection/>
-    <Offer/> 
-    <Feature/>  
-    <Products/> 
-   
-    <About/>
-  
- <Slider/>
- <Testimonal/>
- <Request/>
-    <Footer/>
-   </div>
+    <div>
+      <Hero />
+      <Company />
+      <Collection />
+      <Offer />
+      <Feature />
+      <Products />
+
+      <About />
+
+      <Slider />
+      <Testimonal />
+      <Request />
+      <Footer />
+    </div>
   );
 }

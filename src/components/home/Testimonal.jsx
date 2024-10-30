@@ -7,17 +7,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Reviewcontent from "../common/Reviewcontent";
 
-
 const Testimonal = () => {
   const ref = useRef();
 
   const handleSlideNext = () => {
-    ref.current.slideNext()
-  }
-  
+    ref.current.slideNext();
+  };
+
   const handleSlidePrev = () => {
-    ref.current.slidePrev()
-  }
+    ref.current.slidePrev();
+  };
   return (
     <section className="py-20">
       <div className="max-width">
@@ -30,15 +29,14 @@ const Testimonal = () => {
             </h3>
             <div className="flex gap-5 max-md:gap-3">
               <button
-                 onClick={handleSlidePrev}
-                 
+                onClick={handleSlidePrev}
                 className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full max-md:py-4 max-md:px-3"
               >
                 {" "}
                 <img src="/icons/arrow-left.svg" alt="" className="" />
               </button>
               <button
-                 onClick={handleSlideNext}
+                onClick={handleSlideNext}
                 className=" border-2 border-solid border-[#22C55E] py-5 px-4 rounded-full max-md:py-4 max-md:px-3"
               >
                 {" "}
@@ -51,26 +49,24 @@ const Testimonal = () => {
           <Swiper
             spaceBetween={20}
             breakpoints={{
-            
               640: {
                 slidesPerView: 2,
               },
-             
+
               768: {
                 slidesPerView: 3,
               },
               400: {
                 slidesPerView: 1,
-              }
+              },
             }}
             onSlideChange={() => console.log("slide change")}
-
-            onSwiper={(swiper) => ref.current = swiper}
+            onSwiper={(swiper) => (ref.current = swiper)}
             className="flex gap-5 justify-evenly max-md:flex-col w-full "
           >
             {reviews.map((item, index) => (
               <SwiperSlide key={index} className="w-1/2 ">
-                <Reviewcontent item={item}/>
+                <Reviewcontent item={item} />
               </SwiperSlide>
             ))}
           </Swiper>

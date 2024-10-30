@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import Slidercontent from "../common/Slidercontent";
 
 const Slider = () => {
-
   const [active, setActive] = useState(0);
   const ref = useRef();
 
@@ -81,8 +80,8 @@ const Slider = () => {
             className="w-[60%] flex gap-10 max-md:flex-col max-md:w-full max-md:overflow-hidden"
           >
             {tech.map((item, index) => (
-              <SwiperSlide key={index} >
-                <Slidercontent item={item}  index={index} active={active}/>
+              <SwiperSlide key={index}>
+                <Slidercontent item={item} index={index} active={active} />
               </SwiperSlide>
             ))}
           </Swiper>

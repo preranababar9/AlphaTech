@@ -28,8 +28,16 @@ const About = () => {
             </button>
           </div>
         </div>
-        <img src="/images/about.png" alt="" className="w-1/2  max-md:w-full object-cover max-md:hidden" />
-        <img src="/images/about-mobile.png" alt="" className="lg:hidden md:hidden object-contain h-" />
+        <img
+          src="/images/about.png"
+          alt=""
+          className="w-1/2  max-md:w-full object-cover max-md:hidden"
+        />
+        <img
+          src="/images/about-mobile.png"
+          alt=""
+          className="lg:hidden md:hidden object-contain h-"
+        />
       </div>
     </section>
   );
